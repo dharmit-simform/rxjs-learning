@@ -1,0 +1,51 @@
+<h2>Of From</h2>
+<p>Of: Convert an argument into Observable Sequence</p>
+<p>From: Converts almost anything into Observable Sequence</p>
+
+
+<strong>OF</strong>
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <p class="py-2 border rounded bg-light px-3"><strong>Data: </strong>of('Jake', 'Andrew', 'Thomas')</p>
+    <hr>
+    <ul id="elContainer"></ul>
+  </div>
+
+  <div class="col-md-6">
+    <p class="py-2 border rounded bg-light px-3"><strong>Data: </strong> of(&#123; a: 'Jake', b: 'Andrew', c: 'Thomas'
+      &#125;)</p>
+    <hr>
+    <ul>
+      <li><strong>a: </strong>{{obsMsg.a}}</li>
+      <li><strong>b: </strong>{{obsMsg.b}}</li>
+      <li><strong>c: </strong>{{obsMsg.c}}</li>
+    </ul>
+  </div>
+</div>
+
+<strong>From</strong>
+<hr>
+<div class="row">
+  <div class="col-md-4">
+    <strong>Array</strong>
+    <hr>
+    <p class="py-2 border rounded bg-light px-3 mt-2"><strong>Data: </strong> from(['Jake', 'Andrew', 'Thomas'])</p>
+    <hr>
+    <ul id="elContainer1"></ul>
+  </div>
+  <div class="col-md-4">
+    <strong>Promise to Observable</strong>
+    <hr>
+    <p class="py-2 border rounded bg-light px-3 mt-2"><strong>Data: </strong> from(['Jake', 'Andrew', 'Thomas'])</p>
+    <hr>
+    <ul id="elContainer2"></ul>
+  </div>
+  <div class="col-md-4">
+    <strong>Stream to Observable</strong>
+    <hr>
+    <p class="py-2 border rounded bg-light px-3 mt-2"><strong>Data: </strong> from(['Jake', 'Andrew', 'Thomas'])</p>
+    <hr>
+    <ul id="elContainer3"></ul>
+  </div>
+</div>
