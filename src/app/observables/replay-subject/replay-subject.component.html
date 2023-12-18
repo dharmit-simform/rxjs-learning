@@ -1,1 +1,45 @@
-<p>replay-subject works!</p>
+<div class="mb-5">
+  <h2>Replay Subject</h2>
+  <p>Replay Subject stored Multiple Old Emitted Values and also for how much time we have to store that value.</p>
+
+  <div class="row justify-content-center">
+    <h3>Add Video</h3>
+    <hr>
+    <div class="col-md-4">
+      <input type="text" class="form-control" #myInput>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-success px-3" (click)="onAddVideo()">Add Video</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>User 1</strong>
+      <hr>
+      <ul class="technology_list">
+        <li *ngFor="let item of user1List"><strong>Video: </strong>{{item}}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>User 2</strong>
+      <hr>
+      <ul class="technology_list">
+        <li *ngFor="let item of user2List"><strong>Video: </strong>{{item}}</li>
+      </ul>
+      <button class="mt-3 btn" [ngClass]="user2Subscription ? 'btn-outline-danger' : 'btn-outline-success'"
+        (click)="user2Subscribe()">
+        {{user2Subscription ? 'Unsubscribe' : 'Subscribe'}}</button>
+    </div>
+    <div class="col-md-4">
+      <strong>User 3</strong>
+      <hr>
+      <ul class="technology_list">
+        <li *ngFor="let item of user3List"><strong>Video: </strong>{{item}}</li>
+      </ul>
+      <button class="mt-3 btn" [ngClass]="user3Subscription ? 'btn-outline-danger' : 'btn-outline-success'"
+        (click)="user3Subscribe()">
+        {{user3Subscription ? 'Unsubscribe' : 'Subscribe'}}</button>
+    </div>
+  </div>
+</div>

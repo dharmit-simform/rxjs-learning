@@ -1,1 +1,38 @@
-<p>merge-map works!</p>
+<div>
+  <h2>Merge Map</h2>
+  <p>Flattening Operator. Subscribe inside a Subscribe.</p>
+  <p>MergeAll: Flatten an Observable of Observables</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Source 1 | Map</strong>
+      <hr>
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Videos List </strong> ['Video', 'Music', 'News', 'Tech']
+      </p>
+      <hr>
+      <ul class="technology_list" id="elContainer1">
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>Source 2 | Map + MergeAll</strong>
+      <hr>
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Videos List </strong> ['Video', 'Music', 'News', 'Tech']
+      </p>
+      <hr>
+      <ul class="technology_list" id="elContainer2">
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>Source 3 | mergeMap</strong>
+      <hr>
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Videos List </strong> ['Video', 'Music', 'News', 'Tech']
+      </p>
+      <hr>
+      <ul class="technology_list" id="elContainer3">
+      </ul>
+    </div>
+  </div>
+</div>

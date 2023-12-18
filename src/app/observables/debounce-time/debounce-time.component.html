@@ -1,1 +1,26 @@
-<p>debounce-time works!</p>
+<div>
+  <h2>Debounce Time / Distinct Until Changed</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Debounce Time</strong>
+      <p>Make Server Call after certain period of time is passed.</p>
+
+      <div>
+        <label class="form-label" for="search">Search Text</label>
+        <input type="text" class="form-control" #myInput>
+        <p>Input Text is <strong>{{searchTerm1}}</strong></p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <strong>Distinct Until Changed</strong>
+      <p>Only Send Request if the value is changed then before.</p>
+
+      <div>
+        <label class="form-label" for="search">Search Text</label>
+        <input type="text" class="form-control" #myInput2>
+        <p>Input Text is <strong>{{searchTerm2}}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>

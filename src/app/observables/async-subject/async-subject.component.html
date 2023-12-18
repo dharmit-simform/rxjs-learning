@@ -1,1 +1,30 @@
-<p>async-subject works!</p>
+<div>
+  <h2>Async Subject</h2>
+  <p>It emits the last value when the subscription gets completed.</p>
+
+  <div class="row justify-content-center">
+    <h3>Add Video</h3>
+    <hr>
+    <div class="col-md-4">
+      <input type="text" class="form-control" #myInput>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-success px-3" (click)="onAddVideo()">Add Video</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Async Subject</strong>
+      <hr>
+      <ul class="technology_list">
+        <li><strong>Video: </strong>{{asyncVideoEmit}}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>Complete</strong>
+      <hr>
+      <button class="btn btn-success" (click)="onCompleteSubscription()">Complete Subscription</button>
+    </div>
+  </div>
+</div>

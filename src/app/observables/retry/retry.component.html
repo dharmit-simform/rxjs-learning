@@ -1,1 +1,61 @@
-<p>retry works!</p>
+<div class="mb-5">
+  <h2>Retry, RetryWhen, Delay, Scan</h2>
+  <p>Retry until the data is not fetched</p>
+
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Retry</strong>
+      <p>Retry For <strong>n</strong> number of times until success</p>
+      <hr>
+      <button class="btn btn-primary" type="button" (click)="getUsersData()">
+        <span class="spinner-border spinner-border-sm me-3" *ngIf="fetching" aria-hidden="true"></span>
+        <span role="status">{{fetching ? 'Fetching...' : 'Fetch Details'}}</span>
+      </button>
+      <table class="table mt-4" *ngIf="persons">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of persons">
+            <td>{{person.id}}</td>
+            <td>{{person.name}}</td>
+            <td>{{person.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <strong class="mt-4">Fetch Status : {{status}}</strong>
+    </div>
+    <div class="col-md-6">
+      <strong>Retry When (Deprecated)</strong>
+      <p>Based on a condition retry</p>
+      <hr>
+      <button class="btn btn-primary" type="button" (click)="getUsersDataRetryWhen()">
+        <span class="spinner-border spinner-border-sm me-3" *ngIf="fetching" aria-hidden="true"></span>
+        <span role="status">{{fetching ? 'Fetching...' : 'Fetch Details'}}</span>
+      </button>
+      <table class="table mt-4" *ngIf="persons2">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of persons2">
+            <td>{{person.id}}</td>
+            <td>{{person.name}}</td>
+            <td>{{person.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <strong class="mt-4">Fetch Status : {{status}}</strong>
+    </div>
+  </div>
+</div>

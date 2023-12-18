@@ -1,1 +1,16 @@
-<p>exhaust-map works!</p>
+<div>
+  <h2>Exhaust Map</h2>
+  <p>Projects each source value to an Observable which is merged in the output Observable only if the previous projected
+    Observable has completed.</p>
+  <p>Will only work on next observable if the previous observable is completed. In between all the requests will be
+    ignored.</p>
+
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-success" #btn>Send Request</button>
+    </div>
+    <div class="col-md-6">
+      <p>{{obj | json}}</p>
+    </div>
+  </div>
+</div>
