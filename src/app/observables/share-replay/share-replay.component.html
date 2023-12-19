@@ -1,1 +1,55 @@
-<p>share-replay works!</p>
+<div>
+  <h2>Share Replay</h2>
+  <p>Share source and replay specified number of emissions on subscription. This operator is a specialization of replay
+    that connects to a source observable and multicast through a ReplaySubject constructed with the specified arguments.
+    A successfully completed source will stay cached in the shareReplayed observable forever, but an errored source can
+    be retried.</p>
+
+  <div class="row mt-4">
+    <h4>Clothing</h4>
+    <div class="col-md-3 mb-3" *ngFor="let product of clothing | async">
+      <div class="card">
+        <div class="card-header">
+          {{product.name}}
+          <h6 class="text-secondary">{{product.category}}</h6>
+        </div>
+        <div class="card-body">
+          <p>{{product.sentence}}</p>
+          <p>$ {{product.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <h4>Home</h4>
+    <div class="col-md-3 mb-3" *ngFor="let product of home | async">
+      <div class="card">
+        <div class="card-header">
+          {{product.name}}
+          <h6 class="text-secondary">{{product.category}}</h6>
+        </div>
+        <div class="card-body">
+          <p>{{product.sentence}}</p>
+          <p>$ {{product.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <h4>All Products</h4>
+    <div class="col-md-3 mb-3" *ngFor="let product of allProducts | async">
+      <div class="card">
+        <div class="card-header">
+          {{product.name}}
+          <h6 class="text-secondary">{{product.category}}</h6>
+        </div>
+        <div class="card-body">
+          <p>{{product.sentence}}</p>
+          <p>$ {{product.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './combine-latest.component.css'
 })
 export class CombineLatestComponent {
-
+  selectSource = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight'];
+  colorSource = ['red', 'green', 'blue', 'violet', 'purple', 'grey'];
 }

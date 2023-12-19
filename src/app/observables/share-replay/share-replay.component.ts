@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable, map, filter, shareReplay } from 'rxjs';
 
 @Component({
   selector: 'app-share-replay',
@@ -8,14 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShareReplayComponent implements OnInit {
 
+  allProducts!: Observable<any>;
+  clothing!: Observable<any>;
+  home!: Observable<any>;
+
   constructor(
     private http: HttpClient
   ) { }
 
   ngOnInit(): void {
-    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(res => {
-      console.log(res);
-    })
+    this.allProducts = this.http.get('http://localhost:3000/products').pipe(shareReplay());
+
+    this.clothing = this.allProducts.pipe(
+      map(res => res.filter((data: any) => {
+        return data['category'] === "Clothing";
+      }))
+    );
+
+    this.home = this.allProducts.pipe(
+      map(res => res.filter((data: any) => {
+        return data['category'] === "Home";
+      }))
+    )
   }
 
 }
