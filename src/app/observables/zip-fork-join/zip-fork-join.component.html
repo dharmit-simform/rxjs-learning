@@ -1,1 +1,36 @@
-<p>zip-fork-join works!</p>
+<div>
+  <h2>Zip & ForkJoin</h2>
+  <p>Zip: When the change is detected in both the observables then only it will stream the data otherwise not</p>
+  <p>ForkJoin (Deprecated in v8): Only works with the last value. When the observable gets completed then only it emits
+    the value.</p>
+
+  <div class="row">
+    <div class="col-md-2">
+      <strong>Names</strong>
+      <hr>
+      <select class="form-control" #name>
+        <option *ngFor="let item of selectSource " value="{{item}}">{{item}}</option>
+      </select>
+    </div>
+    <div class="col">
+      <strong>Zip</strong>
+      <hr>
+      <div id="elContainer"></div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-2">
+      <strong>Colors</strong>
+      <hr>
+      <select class="form-control" #color>
+        <option *ngFor="let item of colorSource " value="{{item}}">{{item}}</option>
+      </select>
+    </div>
+    <div class="col">
+      <strong>ForkJoin</strong>
+      <hr>
+      <div id="elContainer2"></div>
+    </div>
+  </div>
+</div>

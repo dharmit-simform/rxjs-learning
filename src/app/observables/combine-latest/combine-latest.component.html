@@ -1,21 +1,21 @@
 <div>
   <h2>combineLatest / withLatestFrom</h2>
-  <p>Combines the Latest Values from multiple streams and emits the output into a single stream.</p>
+  <p>Combine Latest(deprecated in v8): Combines the Latest Values from multiple streams and emits the output into a
+    single stream.</p>
+  <p>withLatestFrom: It works on Master Slave Strategy. It only works if there is a change in the Master</p>
 
   <div class="row">
     <div class="col-md-2">
       <strong>Names</strong>
       <hr>
-      <select class="form-control">
+      <select class="form-control" #name>
         <option *ngFor="let item of selectSource " value="{{item}}">{{item}}</option>
       </select>
     </div>
     <div class="col">
       <strong>CombineLatest</strong>
       <hr>
-      <span class="bg-primary py-2 px-5 mx-2 rounded">One</span>
-      <span class="bg-success py-2 px-5 mx-2 rounded">Two</span>
-      <span class="bg-secondary py-2 px-5 mx-2 rounded">Three</span>
+      <div id="elContainer"></div>
     </div>
   </div>
 
@@ -23,16 +23,14 @@
     <div class="col-md-2">
       <strong>Colors</strong>
       <hr>
-      <select class="form-control">
+      <select class="form-control" #color>
         <option *ngFor="let item of colorSource " value="{{item}}">{{item}}</option>
       </select>
     </div>
     <div class="col">
       <strong>WithLatest</strong>
       <hr>
-      <span class="bg-primary py-2 px-5 mx-2 rounded">One</span>
-      <span class="bg-success py-2 px-5 mx-2 rounded">Two</span>
-      <span class="bg-secondary py-2 px-5 mx-2 rounded">Three</span>
+      <div id="elContainer2"></div>
     </div>
   </div>
 </div>

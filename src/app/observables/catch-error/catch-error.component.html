@@ -1,1 +1,24 @@
-<p>catch-error works!</p>
+<div>
+  <h2>Catch Error & Throw Error</h2>
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="getProducts()">Get Products</button>
+    </div>
+  </div>
+  <div class="row mt-4" *ngIf="allProducts">
+    <h4>All Products</h4>
+    <div class="col-md-3 mb-3" *ngFor="let product of allProducts">
+      <div class="card">
+        <div class="card-header">
+          {{product.name}}
+          <h6 class="text-secondary">{{product.category}}</h6>
+        </div>
+        <div class="card-body">
+          <p>{{product.sentence}}</p>
+          <p>$ {{product.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
